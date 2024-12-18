@@ -48,6 +48,16 @@
             bindings = <&codeBlock>;
             key-positions = <24 25>;
         };
+
+        copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <4 3>;
+        };
+
+        paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <16 15>;
+        };
     };
 
     keymap {
