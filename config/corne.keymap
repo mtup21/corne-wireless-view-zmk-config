@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -49,6 +50,13 @@
             #binding-cells = <0>;
             bindings = <&kp LG(F)>;
             label = "FIND";
+        };
+
+        search: search {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp T &kp E &kp X &kp T &kp SPACE &kp TILDE &kp SPACE &kp SPACE &kp SPACE &kp LS(A) &kp LS(N) &kp LS(D) &kp SPACE &kp T &kp E &kp X &kp T &kp SPACE &kp TILDE &kp SPACE &kp SPACE &kp SPACE &kp LS(O) &kp LS(R) &kp LS(D) &kp LS(E) &kp LS(R) &kp LS(B) &kp LS(Y) &kp SPACE &kp LS(C) &kp R &kp E &kp A &kp T &kp E &kp D &kp LS(D) &kp A &kp T &kp E &kp SPACE &kp LS(D) &kp LS(E) &kp LS(S) &kp LS(C)>;
+            label = "SEARCH";
         };
     };
 
@@ -107,10 +115,10 @@
 
         actions {
             bindings = <
-&trans  &trans  &paste    &kp UP_ARROW  &Copy      &instance     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &Pattern      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans        &find      &codeBlock    &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans        &trans     &trans        &trans  &trans  &trans
+&trans      &trans   &paste    &kp UP_ARROW  &Copy      &instance     &trans  &trans  &trans  &trans  &trans  &bt BT_CLR
+&trans      &search  &kp LEFT  &kp DOWN      &kp RIGHT  &Pattern      &trans  &trans  &trans  &trans  &trans  &trans
+&caps_word  &trans   &trans    &trans        &find      &codeBlock    &trans  &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
+                               &trans        &trans     &trans        &trans  &trans  &trans
             >;
         };
     };
