@@ -12,8 +12,41 @@
         instance: instance {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings = <&none &kp I &kp N &kp S &kp T &kp A &kp N &kp C &kp E &kp EQUAL>;
             label = "INSTANCE";
+        };
+
+        Pattern: Pattern {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp P &kp A &kp T &kp T &kp E &kp R &kp N &kp EQUAL>;
+            label = "PATTERN";
+        };
+
+        codeBlock: codeBlock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_BRACE &kp C &kp O &kp D &kp E &kp RBRC &kp RET &kp RET &kp LEFT_BRACE &kp C &kp O &kp D &kp E &kp RBRC &kp LS(UP_ARROW)>;
+            label = "CODEBLOCK";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        instance {
+            bindings = <&instance>;
+            key-positions = <1 0>;
+        };
+
+        pattern {
+            bindings = <&Pattern>;
+            key-positions = <12 13>;
+        };
+
+        codeBlock {
+            bindings = <&codeBlock>;
+            key-positions = <24 25>;
         };
     };
 
