@@ -107,10 +107,10 @@
 
         actions {
             bindings = <
-&trans  &trans  &trans  &trans  &Copy   &instance     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &paste  &Pattern      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &find   &codeBlock    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &kp C_VOLUME_UP    &Copy   &instance     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp C_VOLUME_DOWN  &paste  &Pattern      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans             &find   &codeBlock    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans             &trans  &trans        &trans  &trans  &trans
             >;
         };
     };
