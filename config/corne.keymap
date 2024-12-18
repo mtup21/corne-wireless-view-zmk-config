@@ -33,21 +33,21 @@
         Copy: Control {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(C)>;
+            bindings = <&kp LG(C)>;
             label = "CONTROL";
         };
 
         paste: paste {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(V)>;
+            bindings = <&kp LG(V)>;
             label = "PASTE";
         };
 
         find: find {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(F)>;
+            bindings = <&kp LG(F)>;
             label = "FIND";
         };
     };
