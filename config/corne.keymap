@@ -29,36 +29,30 @@
             bindings = <&none &kp LEFT_BRACE &kp C &kp O &kp D &kp E &kp RBRC &kp RET &kp RET &kp LEFT_BRACE &kp C &kp O &kp D &kp E &kp RBRC &kp LS(UP_ARROW)>;
             label = "CODEBLOCK";
         };
-    };
 
-    combos {
-        compatible = "zmk,combos";
-
-        instance {
-            bindings = <&instance>;
-            key-positions = <1 0>;
+        Copy: Control {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C)>;
+            label = "CONTROL";
         };
 
-        pattern {
-            bindings = <&Pattern>;
-            key-positions = <12 13>;
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(V)>;
+            label = "PASTE";
         };
 
-        codeBlock {
-            bindings = <&codeBlock>;
-            key-positions = <24 25>;
-        };
-
-        copy {
-            bindings = <&kp LG(C)>;
-            key-positions = <4 3>;
-        };
-
-        paste {
-            bindings = <&kp LG(V)>;
-            key-positions = <16 15>;
+        find: find {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(F)>;
+            label = "FIND";
         };
     };
+
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -113,10 +107,10 @@
 
         actions {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &Copy   &instance     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &paste  &Pattern      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &find   &codeBlock    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans        &trans  &trans  &trans
             >;
         };
     };
