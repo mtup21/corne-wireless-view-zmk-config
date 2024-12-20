@@ -27,7 +27,7 @@
         codeBlock: codeBlock {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_BRACE &kp C &kp O &kp D &kp E &kp RBRC &kp RET &kp RET &kp LEFT_BRACE &kp C &kp O &kp D &kp E &kp RBRC &kp LS(UP_ARROW)>;
+            bindings = <&none &kp LEFT_BRACE &kp C &kp O &kp D &kp E &kp RBRC &kp RET &kp RET &kp LEFT_BRACE &kp C &kp O &kp D &kp E &kp RBRC &kp UP_ARROW>;
             label = "CODEBLOCK";
         };
 
@@ -61,6 +61,15 @@
     };
 
     combos { compatible = "zmk,combos"; };
+
+    behaviors {
+        tapDance: tapDance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE";
+            #binding-cells = <0>;
+            bindings = <&Copy>, <&paste>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -115,10 +124,10 @@
 
         actions {
             bindings = <
-&trans      &trans   &paste    &kp UP_ARROW  &Copy      &instance     &trans  &trans  &trans  &trans  &trans  &bt BT_CLR
-&trans      &search  &kp LEFT  &kp DOWN      &kp RIGHT  &Pattern      &trans  &trans  &trans  &trans  &trans  &trans
-&caps_word  &trans   &trans    &trans        &find      &codeBlock    &trans  &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
-                               &trans        &trans     &trans        &trans  &trans  &trans
+&trans      &trans  &paste    &kp UP_ARROW  &Copy      &instance     &trans  &trans  &trans  &trans  &trans  &bt BT_CLR
+&trans      &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &Pattern      &trans  &trans  &trans  &trans  &trans  &trans
+&caps_word  &trans  &trans    &tapDance     &find      &codeBlock    &trans  &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
+                              &trans        &trans     &trans        &trans  &trans  &trans
             >;
         };
     };
