@@ -27,7 +27,7 @@
         codeBlock: codeBlock {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LEFT_BRACE &kp C &kp O &kp D &kp E &kp RBRC &kp RET &kp RET &kp LEFT_BRACE &kp C &kp O &kp D &kp E &kp RBRC &kp UP_ARROW>;
+            bindings = <&none &kp LEFT_BRACE &kp C &kp O &kp D &kp E &kp RBRC &kp RET &kp RET &kp LEFT_BRACE &kp C &kp O &kp D &kp E &kp RBRC &kp UP>;
             label = "CODEBLOCK";
         };
 
@@ -50,13 +50,6 @@
             #binding-cells = <0>;
             bindings = <&kp LG(F)>;
             label = "FIND";
-        };
-
-        search: search {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp T &kp E &kp X &kp T &kp SPACE &kp TILDE &kp SPACE &kp SPACE &kp SPACE &kp LS(A) &kp LS(N) &kp LS(D) &kp SPACE &kp T &kp E &kp X &kp T &kp SPACE &kp TILDE &kp SPACE &kp SPACE &kp SPACE &kp LS(O) &kp LS(R) &kp LS(D) &kp LS(E) &kp LS(R) &kp LS(B) &kp LS(Y) &kp SPACE &kp LS(C) &kp R &kp E &kp A &kp T &kp E &kp D &kp LS(D) &kp A &kp T &kp E &kp SPACE &kp LS(D) &kp LS(E) &kp LS(S) &kp LS(C)>;
-            label = "SEARCH";
         };
     };
 
@@ -124,10 +117,10 @@
 
         actions {
             bindings = <
-&trans      &trans  &paste    &kp UP_ARROW  &Copy      &instance     &trans  &trans  &trans  &trans  &trans  &bt BT_CLR
-&trans      &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &Pattern      &trans  &trans  &trans  &trans  &trans  &trans
-&caps_word  &trans  &trans    &tapDance     &find      &codeBlock    &trans  &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
-                              &trans        &trans     &trans        &trans  &trans  &trans
+&trans      &trans  &paste    &kp UP_ARROW  &Copy      &instance     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &bt BT_CLR
+&trans      &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &Pattern      &trans        &trans        &trans        &trans  &trans  &trans
+&caps_word  &trans  &trans    &tapDance     &find      &codeBlock    &trans        &trans        &trans        &trans  &trans  &bt BT_CLR_ALL
+                              &trans        &trans     &trans        &trans        &trans        &trans
             >;
         };
     };
