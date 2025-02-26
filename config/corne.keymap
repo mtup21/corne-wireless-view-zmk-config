@@ -53,7 +53,19 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        VolumeUp {
+            bindings = <&kp C_VOLUME_UP>;
+            key-positions = <16 19>;
+        };
+
+        VolumeDown {
+            bindings = <&kp C_VOLUME_DOWN>;
+            key-positions = <15 20>;
+        };
+    };
 
     behaviors {
         tapDance: tapDance {
