@@ -129,10 +129,10 @@
 
         actions {
             bindings = <
-&trans      &trans  &paste    &kp UP_ARROW  &Copy      &instance     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &bt BT_CLR
-&trans      &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &Pattern      &trans        &trans        &trans        &trans  &trans  &trans
-&caps_word  &trans  &trans    &tapDance     &find      &codeBlock    &trans        &trans        &trans        &trans  &trans  &bt BT_CLR_ALL
-                              &trans        &trans     &trans        &trans        &trans        &trans
+&kp LC(ENTER)  &trans  &paste    &kp UP_ARROW  &Copy      &instance     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &bt BT_CLR
+&trans         &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &Pattern      &trans        &trans        &trans        &trans  &trans  &trans
+&caps_word     &trans  &trans    &tapDance     &find      &codeBlock    &trans        &trans        &trans        &trans  &trans  &bt BT_CLR_ALL
+                                 &trans        &trans     &trans        &trans        &trans        &trans
             >;
         };
     };
